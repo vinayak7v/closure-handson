@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Q1:-"    function counter(){
+        var counter = 0;
+    
+        function IncreaseCounter() {
+            return counter += 1;
+        };
+    
+        return IncreaseCounter;
+    }
+    
+    var counter = counter();
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    alert(counter());"</h3>
+    <strong class="ans">Output:- 1, 2, 3, 4</strong>
+    <hr>
+
+
+    <h3>Q2:-"let count = 0;
+        (function () {
+          if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+          }
+          console.log(count); // What is logged?
+        })();"</h3>
+        <strong class="ans">Output:- 1, 0</strong>
+        <hr>
+
+
+        <h3>Q3:-"for (var i = 0; i < 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+          }"</h3>
+          <strong class="ans">Output:- 3, 3, 3</strong>
+          <hr>
+
+          <h3>Q4:-Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</h3>
+            <Strong class="ans">Ans:-
+                function outreFun(L){
+                  function innerFun(B){
+                    console.log(`Area: ${L*B}`);
+                  }
+                  innerFun(10);
+                }
+                outerFun(10);
+                </Strong>
+            <hr>
+
+            <h3>Q5:-Take a variable in outer function and create an inner function to increase the counter every time it is called</h3>
+            <strong class="ans">Ans:-
+                var i = 0;
+                function outer(){
+                  function inner(){
+                    i += 1;
+                    console.log(i);
+                  }
+                    inner();
+                }
+                   outer();
+                   outer();
+                   outer();
+                   outer();</strong>
+            <hr>
+
+
+            <h3>Q6:-"Print Output
+
+                var a = 12;
+                (function () {
+                  alert(a);
+                })();"</h3>
+                <strong class="ans">Output:- 12</strong>
+                <hr>
+
+                <h3>Q7:-"var a = 10;
+                    var x = (function () {
+                      var a = 12;
+                      return function () {
+                        alert(a);
+                      };
+                    })();
+                    x();"</h3>
+                    <strong class="ans">Output:- 12</strong>
+                    <hr>
+
+
+                    <h3>Q8:-"var globalVar = ""xyz"";
+
+                        (function outerFunc(outerArg) {
+                            var outerVar = 'a';
+                            
+                            (function innerFunc(innerArg) {
+                            var innerVar = 'b';
+                            
+                            console.log(
+                                ""outerArg = "" + outerArg + ""\n"" +
+                                ""innerArg = "" + innerArg + ""\n"" +
+                                ""outerVar = "" + outerVar + ""\n"" +
+                                ""innerVar = "" + innerVar + ""\n"" +
+                                ""globalVar = "" + globalVar);
+                            
+                            })(456);
+                        })(123);"</h3>
+                        <strong class="ans">Output:-outerArg = 123
+                            innerArg = 456
+                            outerVar = a
+                            innerVar = b
+                            globalVar = xyz
+                            </strong>
+</body>
+<script src="./script.js"></script>
+</html>
